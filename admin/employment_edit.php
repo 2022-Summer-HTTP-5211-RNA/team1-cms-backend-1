@@ -91,13 +91,13 @@ include( 'includes/header.php' );
   ?>
   <label for="start_month">Start Month:</label>
   <select name="start_month" id="start_month">
-    <?= foreach($months as $month): ?>
-      <?= if(strtolower($month) == $record['start_month']): ?>
+    <?php foreach($months as $month): ?>
+      <?php if(strtolower($month) == $record['start_month']): ?>
         <option valu="<?= strtolower($month) ?>" selected><?= $month ?></option>
-      <?= else: ?>
+      <?php else: ?>
         <option valu="<?= strtolower($month) ?>"><?= $month ?></option>
-      <?= endif ?>
-    <?= endforeach ?>
+      <?php endif ?>
+    <?php endforeach ?>
   </select>
 
   <br>
@@ -109,13 +109,13 @@ include( 'includes/header.php' );
 
   <label for="end_month">End Month:</label>
   <select name="end_month" id="end_month">
-    <?= foreach($months as $month): ?>
-      <?= if(strtolower($month) == $record['end_month']): ?>
+    <?php foreach($months as $month): ?>
+      <?php if(strtolower($month) == $record['end_month']): ?>
         <option valu="<?= strtolower($month) ?>" selected><?= $month ?></option>
-      <?= else: ?>
+      <?php else: ?>
         <option valu="<?= strtolower($month) ?>"><?= $month ?></option>
-      <?= endif ?>
-    <?= endforeach ?>
+      <?php endif ?>
+    <?php endforeach ?>
   </select>
 
   <br>

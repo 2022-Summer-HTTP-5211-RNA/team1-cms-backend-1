@@ -82,20 +82,20 @@ include( 'includes/header.php' );
   <label for="url">Degree Type:</label>
   <select name="degree_type" id="degree_type">
     <option value="" disabled>--Select--</option>
-    <?= foreach($degree_types as $degree_type): ?>
-        <?= if ($record['degree_type'] == $degree_type): ?>
+    <?php foreach($degree_types as $degree_type): ?>
+        <?php if ($record['degree_type'] == $degree_type): ?>
           <option value="<?= $degree_type ?>" selected><?= $degree_type ?></option>
-        <?= else: ?>
+        <?php else: ?>
           <option value="<?= $degree_type ?>"><?= $degree_type ?></option>
-        <?= endif ?>
+        <?php endif ?>
       } 
-    <?= endforeach ?>
+    <?php endforeach ?>
   </select>
 
   <br>
   
   <label for="degree">Degree:</label>
-  <input type="text" name="degree" id="degree" value="<?php echo htmlentities( $record['degree'] ); ?>">
+  <input type="text" name="degree" id="degree" value="<?= htmlentities( $record['degree'] ) ?>">
     
   <br>
 
@@ -105,13 +105,13 @@ include( 'includes/header.php' );
     $months = array("January","February","March","April","May","June","July","August","September","October","November","December");
   ?>
   <select type="text" name="start_month" id="start_month">
-    <?= foreach($months as $month): ?>
-      <?= if(strtolower($month) == $record['month']) ?>
+    <?php foreach($months as $month): ?>
+      <?php if(strtolower($month) == $record['month']): ?>
         <option value="<?= strtolower($month) ?>" selected><?= $month ?></option>
-      <?= else: ?>
+      <?php else: ?>
         <option value="<?= strtolower($month) ?>"><?= $month ?></option>
-      <?= endif ?>
-    <?= endforeach ?>
+      <?php endif ?>
+    <?php endforeach ?>
   </select>
 
   <br>
@@ -123,19 +123,19 @@ include( 'includes/header.php' );
 
   <label for="end_month">End Month:</label>
   <select type="text" name="end_month" id="end_month">
-    <?= foreach($months as $month): ?>
-      <?= if(strtolower($month) == $record['end_month']) ?>
+    <?php foreach($months as $month): ?>
+      <?php if(strtolower($month) == $record['end_month']): ?>
         <option value="<?= strtolower($month) ?>" selected><?= $month ?></option>
-      <?= else: ?>
+      <?php else: ?>
         <option value="<?= strtolower($month) ?>"><?= $month ?></option>
-      <?= endif ?>
-    <?= endforeach ?>
+      <?php endif ?>
+    <?php endforeach ?>
   </select>
   
   <br>
   
   <label for="end_year">End Year:</label>
-  <input type="text" name="end_year" id="end_year" value="<?php echo htmlentities( $record['end_year'] ); ?>" pattern="\d{4}">
+  <input type="text" name="end_year" id="end_year" value="<?= htmlentities( $record['end_year'] ); ?>" pattern="\d{4}">
     
   <br>
   

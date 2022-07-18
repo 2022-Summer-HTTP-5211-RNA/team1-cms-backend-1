@@ -68,9 +68,9 @@ include( 'includes/header.php' );
   ?>
   <label for="start_month">Start Month:</label>
   <select name="start_month" id="start_month">
-    <?= foreach($months as $month): ?>
+    <?php foreach($months as $month): ?>
       <option valu="<?= strtolower($month) ?>"><?= $month ?></option>
-    <?= endforeach ?>
+    <?php endforeach ?>
   </select>
 
   <br>
@@ -82,9 +82,9 @@ include( 'includes/header.php' );
 
   <label for="end_month">End Month:</label>
   <select name="end_month" id="end_month">
-    <?= foreach($months as $month): ?>
+    <?php foreach($months as $month): ?>
       <option valu="<?= strtolower($month) ?>"><?= $month ?></option>
-    <?= endforeach ?>
+    <?php endforeach ?>
   </select>
 
   <br>

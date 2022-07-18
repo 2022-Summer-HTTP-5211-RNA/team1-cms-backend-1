@@ -60,9 +60,9 @@ include( 'includes/header.php' );
   ?>
   <select name="degree_type" id="degree_type">
     <option value="" disabled>--Select--</option>
-    <?= foreach($degree_types as $degree_type): ?>
+    <?php foreach($degree_types as $degree_type): ?>
       <option value="<?= $degree_type ?>"><?= $degree_type ?></option>
-    <?= endforeach; ?>
+    <?php endforeach; ?>
   </select>
 
   <br>
@@ -77,9 +77,9 @@ include( 'includes/header.php' );
     $months = array("January","February","March","April","May","June","July","August","September","October","November","December");
   ?>
   <select type="text" name="start_month" id="start_month">
-    <?= foreach($months as $month): ?>
+    <?php foreach($months as $month): ?>
       <option value="<?= strtolower($month) ?>"><?= $month ?></option>
-    <?= endforeach ?>
+    <?php endforeach ?>
   </select>
 
   <br>
@@ -91,9 +91,9 @@ include( 'includes/header.php' );
 
   <label for="end_month">End Month:</label>
   <select type="text" name="end_month" id="end_month">
-    <?= foreach($months as $month): ?>
+    <?php foreach($months as $month): ?>
       <option value="<?= strtolower($month) ?>"><?= $month ?></option>
-    <?= endforeach ?>
+    <?php endforeach ?>
   </select>
   
   <br>
