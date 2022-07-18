@@ -27,6 +27,11 @@ include( 'includes/header.php' );
     </a>
   </li>
   <li>
+    <a href="employment.php">
+      Manage Employment
+    </a>
+  </li>
+  <li>
     <a href="users.php">
       Manage Users
     </a>
